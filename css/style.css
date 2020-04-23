@@ -1,0 +1,238 @@
+@charset "UTF-8";
+
+/* ヘッダー */
+header {
+    width: 100%;
+    height: 50px;
+    background-color: rgb(255, 112, 136);
+    color: white;
+    font-size: 18px;
+    font-family: 'arial unicode ms';
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    /* ↑ヘッダー固定したいが、アニメーションをつけるとヘッダーが消える */
+}
+
+.header-left1 img {
+    width: 40px;
+    margin-left: 65px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    transition: 1.0s;
+    transform: rotateZ( 0deg );
+}
+
+.header-left1:hover img {
+    transform: rotateZ( 360deg );
+}
+
+.header-left1 {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.header-left1 ul {
+    display: flex;
+}
+
+.header-left1 li {
+    margin-left: 30px;
+}
+
+a {
+    color: white;
+}
+
+a:hover {
+    color: black;
+}
+
+a:active {
+    color: magenta;
+}
+
+
+/* ホーム */
+.myname {
+    height: 700px;
+    background-image: url(../img/女の子.JPG);
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-family: arial white;
+    background-attachment: fixed;
+    margin-top: 50px;
+}
+
+section h1 {
+    width: 50%;
+    height: 20%;
+    font-size: 50px;
+    letter-spacing: 0.2em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(250, 248, 245, 0.5);
+}
+
+.myname {
+    animation: myname 3s;
+    position: relative;
+}
+
+@keyframes myname {
+    0% {
+        opacity: 0;
+        bottom: 750px;
+    }
+    100% {
+        opacity: 1;
+        bottom: 0px;
+    }
+}
+
+
+/* 私について */
+.about-me {
+    height: 700px;
+    background-color:	#F3EEEE;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: about-me 3s;
+    position: relative;
+}
+
+@keyframes about-me {
+    0% {
+        opacity: 0;
+        left: 150px;
+    }
+    100% {
+        opacity: 1;
+        left: 0px;
+
+    }
+}
+
+.about-me img {
+    width: 25%;
+    animation: ball 0.8s ease-in infinite alternate;
+}
+
+@keyframes ball {
+    0% {
+        transform: translateY(0%);
+    }
+    100% {
+        transform: translateY(200px);
+        /* height: 95px; */
+    }
+}
+
+.about-me-right {
+    width: 40%;
+    margin-left: 150px;
+}
+
+/* ↓”私について”、”教えて”、”回答フォーム”共通 */
+.title {
+    margin-bottom: 70px;
+    font-size: 40px;
+    font-family: 'arial unicode ms';
+
+}
+
+.title-deco {
+    background: linear-gradient(transparent 60%, #fcee21 0%);
+}
+/* ↑”私について”、”教えて”、”回答フォーム”共通 */
+
+.discription {
+    font-size: 15px;
+    line-height: 30px;
+    font-family: 'arial unicode ms';
+}
+
+
+/* 教えて？ */
+aside {
+    height: 700px;
+    background-image: url(../img/女の子２.JPG);
+    background-size: cover;
+    background-position: center;
+}    
+
+.tell-me {
+    width: 60%;
+    height: 700px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    background-color: rgb(255, 255, 255, 0.5);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'arial unicode ms';
+
+}
+
+.question {
+    margin: 40px 200px;
+}
+
+.question li {
+    margin-bottom: 10px;
+}
+
+.question textarea {
+    margin-bottom: 10px;
+    width: 100%;
+    height: 30px;
+}
+
+/* .question input {
+    margin-bottom: 20px;
+    width: 80px;
+} */
+
+.contact {
+    margin-bottom: 10px;
+}
+
+input[type="submit"] {
+    background: rgb(245, 63, 63, 0.5);
+    border-radius: 10px;
+    color: white;
+    font-size:17px;
+    font-weight:bold;
+    padding: 10px 20px;
+    text-align: center;
+    margin: 30px;
+}
+
+input:hover[type="submit"] {
+    background: rgb(245, 63, 63);
+}
+
+
+/* フッター */
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    color: white;
+    padding: 5px;
+}
