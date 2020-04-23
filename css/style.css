@@ -82,7 +82,7 @@ section h1 {
 }
 
 .myname {
-    animation: myname 3s;
+    /* animation: myname 3s; */
     position: relative;
 }
 
